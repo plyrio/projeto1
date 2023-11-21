@@ -1,1 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
+img {
+    height: 8vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* 100% da altura da viewport */
+}
+
+main {
+    flex: 1;
+    /* Faz o conteúdo principal ocupar todo o espaço disponível */
+}
+
+@media (min-width: 992px) {
+
+    .footer {
+        position: fixed;
+        width: 250px;
+        bottom: 0;
+        border-radius: 3%;
+        /* 100% da altura da viewport */
+        flex-direction: column;
+    }
+
+    main {
+        padding-left: 250px;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 250px;
+        height: 100vh;
+        /* 100% da altura da viewport */
+        flex-direction: column;
+    }
+
+    .navbar-brand {
+        order: -1;
+        /* Move a logo para o topo no layout de coluna */
+    }
+
+    .navbar-nav {
+        width: 100%;
+        /* Ajusta a largura da lista de navegação */
+        text-align: center;
+        /* Centraliza os itens do menu na vertical */
+    }
+
+    .navbar-toggler {
+        display: none;
+        /* Esconde o botão de hamburguer em telas grandes */
+    }
+}
